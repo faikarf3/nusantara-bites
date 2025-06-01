@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Gallery | Nusantara Bites</title>
+    <meta name="description" content="Explore our menu through beautiful images of authentic Indonesian dishes at Nusantara Bites.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nusantara Bites</a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="page-hero" style="background-image: url('images/main-page-bg.jpg');">
+        <div class="hero-content">
+            <h1>Menu Gallery</h1>
+            <p>Explore our authentic Indonesian dishes</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nusantara Bites</h3>
+                <p>Authentic Indonesian Cuisine in New York</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
+                <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
+                <p>Sunday: 12:00 PM - 9:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>123 Indonesian Street</p>
+                <p>Midtown Manhattan</p>
+                <p>New York, NY 10001</p>
+                <p>Phone: (212) 555-0123</p>
+                <p>Email: info@nusantarabites.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nusantara Bites. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Array of menu items with their details
+            const menuItems = [
+                {
+                    image: 'images/rendang.jpg',
+                    title: 'Beef Rendang',
+                    description: 'Slow-cooked spicy beef stew from West Sumatra',
+                    category: 'signature'
+                },
+                {
+                    image: 'images/nasi-goreng.jpg',
+                    title: 'Nasi Goreng',
+                    description: 'Indonesian-style fried rice with sweet soy sauce',
+                    category: 'signature'
+                },
+                {
+                    image: 'images/sate-ayam.jpg',
+                    title: 'Sate Ayam',
+                    description: 'Grilled chicken skewers with peanut sauce',
+                    category: 'signature'
+                },
+                {
+                    image: 'images/gado-gado.jpg',
+                    title: 'Gado-Gado',
+                    description: 'Indonesian salad with peanut dressing',
+                    category: 'traditional'
+                },
+                {
+                    image: 'images/soto-ayam.jpg',
+                    title: 'Soto Ayam',
+                    description: 'Turmeric chicken soup with vermicelli',
+                    category: 'traditional'
+                },
+                {
+                    image: 'images/bakso.jpg',
+                    title: 'Bakso',
+                    description: 'Indonesian meatball soup with noodles',
+                    category: 'traditional'
+                },
+                {
+                    image: 'images/pempek.jpg',
+                    title: 'Pempek',
+                    description: 'Savory fishcakes from Palembang',
+                    category: 'regional'
+                },
+                {
+                    image: 'images/nasi-uduk.jpg',
+                    title: 'Nasi Uduk',
+                    description: 'Coconut rice with traditional side dishes',
+                    category: 'regional'
+                },
+                {
+                    image: 'images/mie-goreng.jpg',
+                    title: 'Mie Goreng',
+                    description: 'Stir-fried noodles with special sauce',
+                    category: 'regional'
+                },
+                {
+                    image: 'images/es-cendol.jpg',
+                    title: 'Es Cendol',
+                    description: 'Sweet iced drink with pandan jelly',
+                    category: 'drinks'
+                },
+                {
+                    image: 'images/teh-botol.jpg',
+                    title: 'Teh Botol',
+                    description: 'Iconic sweet jasmine tea',
+                    category: 'drinks'
+                },
+                {
+                    image: 'images/bajigur.jpg',
+                    title: 'Bajigur',
+                    description: 'Warm spiced coconut milk drink',
+                    category: 'drinks'
+                }
+            ];
+
+            // Function to check if an image exists
+            function checkImageExists(url) {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = url;
+                });
+            }
+
+            // Function to create a slide
+            function createSlide(item) {
+                return `
+                    <div class="swiper-slide gallery-item">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="gallery-overlay">
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Load slides with existing images
+            async function loadGallery() {
+                const swiperWrapper = document.querySelector('.swiper-wrapper');
+                let validSlides = [];
+
+                // Check each image and only add slides with existing images
+                for (const item of menuItems) {
+                    const exists = await checkImageExists(item.image);
+                    if (exists) {
+                        validSlides.push(createSlide(item));
+                    }
+                }
+
+                // Add valid slides to the swiper
+                swiperWrapper.innerHTML = validSlides.join('');
+
+                // Initialize Swiper only if there are slides
+                if (validSlides.length > 0) {
+                    const swiper = new Swiper('.gallery-swiper', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        loop: true,
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        effect: 'coverflow',
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 2,
+                            slideShadows: false,
+                        },
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+                } else {
+                    // Show a message if no images are available
+                    swiperWrapper.innerHTML = `
+                        <div class="no-images-message">
+                            <p>No images available at the moment.</p>
+                        </div>
+                    `;
+                }
+            }
+
+            // Load the gallery
+            loadGallery();
+        });
+    </script>
+</body>
+</html> 
