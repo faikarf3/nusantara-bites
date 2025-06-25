@@ -65,6 +65,7 @@
                             <span class="price">$18</span>
                         </div>
                         <p>Slow-cooked spicy beef stew from West Sumatra, rich in coconut milk and spices. Served with steamed rice and vegetables.</p>
+                        <button class="add-to-cart-btn" data-name="Rendang" data-price="18">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -72,6 +73,7 @@
                             <span class="price">$14</span>
                         </div>
                         <p>Indonesian-style fried rice with your choice of chicken, beef, or shrimp. Served with a fried egg, prawn crackers, and pickles.</p>
+                        <button class="add-to-cart-btn" data-name="Nasi Goreng" data-price="14">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -79,6 +81,7 @@
                             <span class="price">$16</span>
                         </div>
                         <p>Grilled chicken skewers served with our signature peanut sauce, rice cakes, and cucumber salad.</p>
+                        <button class="add-to-cart-btn" data-name="Sate Ayam" data-price="16">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -93,6 +96,7 @@
                             <span class="price">$12</span>
                         </div>
                         <p>A warm salad of boiled vegetables, tofu, and eggs with our special peanut dressing. Served with rice crackers.</p>
+                        <button class="add-to-cart-btn" data-name="Gado-Gado" data-price="12">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -100,6 +104,7 @@
                             <span class="price">$13</span>
                         </div>
                         <p>Comforting turmeric chicken soup with vermicelli, cabbage, and boiled egg. Served with rice and condiments.</p>
+                        <button class="add-to-cart-btn" data-name="Soto Ayam" data-price="13">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -107,6 +112,7 @@
                             <span class="price">$11</span>
                         </div>
                         <p>Indonesian meatball soup served with noodles, fried wontons, and our special sambal sauce.</p>
+                        <button class="add-to-cart-btn" data-name="Bakso" data-price="11">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -121,6 +127,7 @@
                             <span class="price">$15</span>
                         </div>
                         <p>Savory fishcakes from Palembang served with a sweet-sour vinegar sauce and cucumber.</p>
+                        <button class="add-to-cart-btn" data-name="Pempek" data-price="15">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -128,6 +135,7 @@
                             <span class="price">$13</span>
                         </div>
                         <p>Coconut rice served with fried chicken, tempeh, and various traditional side dishes.</p>
+                        <button class="add-to-cart-btn" data-name="Nasi Uduk" data-price="13">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -135,6 +143,7 @@
                             <span class="price">$14</span>
                         </div>
                         <p>Stir-fried noodles with vegetables, your choice of protein, and our special sauce.</p>
+                        <button class="add-to-cart-btn" data-name="Mie Goreng" data-price="14">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -149,6 +158,7 @@
                             <span class="price">$6</span>
                         </div>
                         <p>Sweet iced drink made with coconut milk, palm sugar syrup, and pandan-flavored rice flour jelly.</p>
+                        <button class="add-to-cart-btn" data-name="Es Cendol" data-price="6">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -156,6 +166,7 @@
                             <span class="price">$4</span>
                         </div>
                         <p>Iconic sweet bottled jasmine tea, served cold.</p>
+                        <button class="add-to-cart-btn" data-name="Teh Botol" data-price="4">Add to Cart</button>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -163,13 +174,26 @@
                             <span class="price">$5</span>
                         </div>
                         <p>Warm, spiced coconut milk drink with ginger and palm sugar.</p>
+                        <button class="add-to-cart-btn" data-name="Bajigur" data-price="5">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" aria-label="Close Cart">&times;</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cart-total">0</span></div>
+            <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+        </div>
+    </div>
+    <button id="open-cart" class="open-cart-btn"><i class="fa fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</button>
 
     <!-- Footer -->
     <footer class="footer">
